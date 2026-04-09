@@ -1,0 +1,271 @@
+/* -------------------------
+   🌼 GENERAL PAGE SETTINGS
+   ------------------------- */
+body {
+  font-family: 'Poppins', sans-serif; /* Font style for all text */
+  scroll-behavior: smooth; /* Smooth scrolling between links */
+  background-color: #fffaf6; /* Light cream background color */
+  margin: 0; /* Removes default browser margin */
+  padding: 0; /* Removes default padding */
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif; /* Stylish font for headings */
+  color: #e85a70 !important; /* Pink color for all headings */
+}
+/* Pink Bakery Theme Button */
+.btn-order {
+  background-color: #e85a70 !important;
+  color: #fff !important;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+  background-color: #c94a5e !important;
+  transform: scale(1.05);
+}
+
+/* -------------------------
+   🌟 NAVIGATION BAR SECTION
+   ------------------------- */
+.navbar-brand {
+  font-family: 'Playfair Display', serif; /* Logo font */
+  font-size: 1.8rem; /* Logo text size */
+  color: #e85a70 !important; /* Pink color for brand name */
+}
+.nav-link {
+  color: #333 !important; /* Default link color (dark gray) */
+  font-weight: 500; /* Slightly bold text for links */
+  margin: 0 8px; /* Space between each menu item */
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #e85a70 !important; /* Pink color on hover or active */
+  text-decoration: underline; /* Underline when hovered */
+}
+
+/* -------------------------
+   🍰 HERO / MAIN BANNER SECTION
+   ------------------------- */
+.hero-section {
+  background: url('images/bakery-hero.jpg') center/cover no-repeat; /* Background image setup */
+  height: 100vh; /* Full screen height */
+  position: relative; /* Needed for overlay positioning */
+  overflow: hidden; /* Hides extra parts of image */
+}
+.overlay {
+  background: linear-gradient(to bottom right, rgba(232, 90, 112, 0.7), rgba(255, 182, 193, 0.6)); /* Pink gradient overlay */
+  position: absolute; /* Covers the hero section completely */
+  inset: 0; /* Shortcut for top:0; right:0; bottom:0; left:0; */
+  z-index: 1; /* Places it above background but below text */
+}
+.hero-section .container {
+  position: relative; /* Allows proper z-index stacking */
+  z-index: 2; /* Ensures text is visible above overlay */
+}
+.hero-section h1 {
+  color: #fff; /* White title text */
+}
+
+/* ---------- Buttons ---------- */
+.btn-custom {
+  background-color: #fff; /* White button background */
+  color: #e85a70; /* Pink text color */
+  border-radius: 50px; /* Round button shape */
+  padding: 12px 30px; /* Button size */
+  transition: all 0.3s ease; /* Smooth hover animation */
+}
+.btn-custom:hover {
+  background-color: #e85a70; /* Pink background on hover */
+  color: #fff; /* White text when hovered */
+  transform: scale(1.05); /* Button grows slightly on hover */
+}
+
+/* -------------------------
+   ✨ ANIMATION EFFECTS
+   ------------------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Invisible at start */
+    transform: translateY(40px); /* Slightly below position */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moves to normal position */
+  }
+}
+.animate-fade {
+  animation: fadeInUp 1.2s ease-out forwards; /* Runs the fadeInUp animation */
+}
+.animate-fade-delay {
+  opacity: 0; /* Hidden before animation */
+  animation: fadeInUp 1.2s ease-out forwards; /* Same animation */
+  animation-delay: 0.5s; /* Starts half second later */
+}
+
+/* -------------------------
+   🧁 MENU SECTION (Products)
+   ------------------------- */
+.menu-header h1 {
+  color: #e85a70; /* Pink heading color */
+}
+.card {
+  border: none; /* Removes default border */
+  border-radius: 15px; /* Rounded card corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Soft shadow effect */
+  transition: transform 0.3s ease; /* Hover movement animation */
+}
+.card:hover {
+  transform: translateY(-5px); /* Lifts card slightly on hover */
+}
+.card img {
+  border-top-left-radius: 15px; /* Round top-left corner */
+  border-top-right-radius: 15px; /* Round top-right corner */
+  height: 220px; /* Image height */
+  object-fit: cover; /* Keeps image properly cropped */
+}
+.btn-order {
+  background-color: #e85a70; /* Pink order button */
+  color: white; /* White text */
+  border: none; /* Removes default border */
+  transition: 0.3s; /* Hover transition */
+}
+.btn-order:hover {
+  background-color: #d94862; /* Darker pink on hover */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+/* -------------------------
+   🧡 ABOUT US SECTION
+   ------------------------- */
+.about-section {
+  padding: 80px 0; /* Space above and below */
+  background-color: #fff5f8; /* Very light pink background */
+}
+.about-section h2 {
+  color: #e85a70; /* Pink title */
+  font-weight: 700; /* Bold heading */
+}
+.about-section p {
+  color: #555; /* Dark gray paragraph text */
+  font-size: 1.1rem; /* Slightly large font for readability */
+  line-height: 1.7; /* Comfortable spacing between lines */
+}
+.about-img {
+  border-radius: 15px; /* Rounded image corners */
+  width: 100%; /* Full width of column */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+/* -------------------------
+   🖼️ GALLERY SECTION
+   ------------------------- */
+.gallery-section {
+  padding: 80px 0; /* Top & bottom spacing */
+  background-color: #fffaf6; /* Light cream background */
+}
+.gallery-section h2 {
+  color: #e85a70; /* Pink heading */
+  margin-bottom: 40px; /* Space below heading */
+}
+.gallery-item {
+  position: relative; /* Allows image animation */
+  overflow: hidden; /* Hides overflowed image parts */
+  border-radius: 12px; /* Rounded image edges */
+  transition: transform 0.4s ease; /* Smooth hover zoom */
+}
+.gallery-item img {
+  width: 100%; /* Full width image */
+  height: 250px; /* Fixed height */
+  object-fit: cover; /* Keeps proportions nicely */
+  border-radius: 12px; /* Rounded corners */
+}
+.gallery-item:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* -------------------------
+   ⭐ CUSTOMER REVIEWS SECTION
+   ------------------------- */
+.reviews-section {
+  padding: 80px 0;
+  background-color: #fff5f8; /* Light pink background */
+}
+.reviews-section h2 {
+  color: #e85a70;
+  margin-bottom: 50px;
+}
+.review-card {
+  background-color: #fff; /* White background for cards */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Soft shadow */
+  padding: 25px; /* Inner spacing */
+  text-align: center; /* Centered text */
+  transition: transform 0.3s ease; /* Hover animation */
+}
+.review-card:hover {
+  transform: translateY(-5px); /* Lift on hover */
+}
+.review-card p {
+  color: #555; /* Gray review text */
+  font-style: italic; /* Italic feedback text */
+}
+.review-card .reviewer {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #e85a70; /* Pink reviewer name */
+}
+
+/* -------------------------
+   📞 CONTACT US SECTION
+   ------------------------- */
+.contact-section {
+  padding: 80px 0;
+  background-color: #fffaf6; /* Cream background */
+}
+.contact-section h2 {
+  color: #e85a70;
+  margin-bottom: 40px; /* Space below heading */
+}
+.contact-section form {
+  background-color: #fff; /* White form box */
+  padding: 40px; /* Inner space */
+  border-radius: 15px; /* Rounded edges */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Light shadow */
+}
+.contact-section input,
+.contact-section textarea {
+  border-radius: 10px; /* Rounded input boxes */
+  border: 1px solid #ddd; /* Light gray border */
+}
+.contact-section button {
+  background-color: #e85a70; /* Pink send button */
+  border: none; /* Removes default border */
+  color: #fff; /* White text */
+  border-radius: 30px; /* Round button edges */
+  padding: 10px 25px; /* Size of button */
+  transition: 0.3s; /* Hover animation */
+}
+.contact-section button:hover {
+  background-color: #d94862; /* Darker pink on hover */
+}
+
+/* -------------------------
+   📱 RESPONSIVE DESIGN (Mobile)
+   ------------------------- */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh; /* Smaller banner height on mobile */
+  }
+  .about-section img {
+    margin-bottom: 20px; /* Space below image */
+  }
+  .card img {
+    height: 180px; /* Smaller product images */
+  }
+  .gallery-item img {
+    height: 180px; /* Smaller gallery images */
+  }
+}
